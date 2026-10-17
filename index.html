@@ -1,205 +1,66 @@
-Commit bf9d841
-Aeshaxd
-Aeshaxd
-authored
-now
-Verified
-Add initial HTML structure for PaperPilot website
-This commit adds a complete HTML structure for the PaperPilot website, including styles, header, main content sections, and footer. It features sections for topics, practice, solutions, and past papers.
-main
-1 parent 
-a515a4b
- commit 
-bf9d841
-1 file changed
-
-+176
-Lines changed: 176 additions & 0 deletions
-File tree
-Filter files…
-index.html
-Search within code
- 
-Customizable line height
-The default line height has been increased for improved accessibility. You can choose to enable a more compact line height from the view settings menu.
-
-‎index.html‎
-+176
-Lines changed: 176 additions & 0 deletions
-Original file line number	Diff line number	Diff line change
-@@ -1 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PaperPilot | Computer Science</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A pink, student-made Cambridge study hub for selected O Level and AS subjects.">
+<title>Cambridge Study Hub ♡</title>
 <style>
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #faf8ff;
-  color: #30264c;
-}
-header {
-  padding: 22px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: white;
-  border-bottom: 1px solid #eee7fa;
-}
-.logo { font-size: 24px; font-weight: bold; }
-nav a { color: #655486; text-decoration: none; margin-left: 16px; }
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #eee6ff, #fff1e8);
-}
-.tag {
-  background: white;
-  border-radius: 20px;
-  padding: 9px 15px;
-  font-size: 13px;
-}
-h1 { font-size: clamp(36px, 6vw, 58px); margin: 25px 0 15px; }
-.hero p { max-width: 520px; margin: auto; line-height: 1.7; color: #655b77; }
-.button {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 14px 23px;
-  border-radius: 12px;
-  background: #7356b5;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-main { max-width: 1000px; margin: auto; padding: 40px 22px; }
-.muted { color: #756b87; line-height: 1.7; }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-  margin-top: 25px;
-}
-.card {
-  display: block;
-  background: white;
-  padding: 24px;
-  border: 1px solid #eee7fa;
-  border-radius: 18px;
-  color: inherit;
-  text-decoration: none;
-}
-.card:hover { transform: translateY(-3px); }
-.emoji { font-size: 28px; }
-.pill {
-  display: inline-block;
-  background: #f0eaff;
-  color: #674b9c;
-  padding: 5px 9px;
-  border-radius: 8px;
-  font-size: 12px;
-}
-section.content { padding-top: 30px; }
-footer {
-  text-align: center;
-  padding: 28px;
-  color: #756b87;
-  border-top: 1px solid #eee7fa;
-}
-@media(max-width:500px) {
-  header { padding: 18px; }
-  nav a { margin-left: 8px; font-size: 13px; }
-  .hero { padding: 60px 18px; }
-}
+:root{--pink:#f8b8cf;--pink2:#ffe5ef;--pink3:#fff2f7;--rose:#c64d7c;--ink:#513343;--muted:#8b6c7a;--paper:#fffdfd;--line:#f1d6e1;--lilac:#eee5ff;--cream:#fff8e9;--mint:#e7f7ed;--shadow:0 14px 38px #b64d7712}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--pink3);color:var(--ink);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;line-height:1.6}a{color:inherit}button,input,select{font:inherit}.top{background:#fffafc;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.top-inner{max-width:1120px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:1.05rem;font-weight:900;letter-spacing:-.03em}.brandicon{width:42px;height:42px;border-radius:15px;background:var(--pink2);display:grid;place-items:center;font-size:23px}.nav{display:flex;gap:18px;align-items:center}.nav a{text-decoration:none;font-size:.9rem;color:var(--muted);font-weight:700}.nav a:hover{color:var(--rose)}.nav .navbtn{background:var(--rose);color:white;padding:9px 13px;border-radius:12px}.hero{max-width:1120px;margin:0 auto;padding:65px 22px 38px;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}.kicker{display:inline-block;padding:7px 12px;border:1px solid #f3c4d6;background:#fffafd;border-radius:999px;color:var(--rose);font-size:.8rem;font-weight:850}.hero h1{font-size:clamp(2.8rem,6vw,4.9rem);line-height:1.03;letter-spacing:-.07em;margin:19px 0 15px}.hero h1 span{color:var(--rose)}.hero p{color:var(--muted);max-width:560px;font-size:1.04rem}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:13px;text-decoration:none;font-size:.9rem;font-weight:850;border:1px solid var(--line);cursor:pointer}.btn.primary{background:var(--rose);color:white;border-color:var(--rose)}.btn.secondary{background:white}.hero-card{background:white;border:1px solid var(--line);border-radius:25px;padding:23px;box-shadow:var(--shadow);transform:rotate(1.2deg);position:relative}.hero-card:after{content:'♡';position:absolute;right:-13px;top:-19px;color:#e883a8;font-size:56px;transform:rotate(13deg)}.tiny{font-size:.72rem;font-weight:900;color:var(--rose);letter-spacing:.1em;text-transform:uppercase}.hero-card h2{margin:8px 0 18px;font-size:1.4rem}.planner-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid #f5e4eb}.bubble{width:39px;height:39px;display:grid;place-items:center;border-radius:13px;font-size:21px;background:var(--pink2);flex:none}.bubble.lilac{background:var(--lilac)}.bubble.mint{background:var(--mint)}.planner-row small{display:block;color:var(--muted)}main{max-width:1120px;margin:auto;padding:15px 22px 70px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:4px 0 35px}.stat{padding:14px 16px;border-radius:16px;background:#fffdfd;border:1px solid var(--line)}.stat strong{display:block}.stat span{font-size:.85rem;color:var(--muted)}.section-title{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:30px 0 16px}.eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--rose);font-weight:900}.section-title h2{margin:4px 0 0;font-size:clamp(1.7rem,3vw,2.2rem);letter-spacing:-.05em}.section-title p{margin:5px 0 0;color:var(--muted)}.filters{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.filter{border:1px solid var(--line);background:white;color:var(--muted);border-radius:999px;padding:9px 13px;font-size:.86rem;font-weight:800;cursor:pointer}.filter.active,.filter:hover{background:var(--rose);color:white;border-color:var(--rose)}.subject-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.subject{background:white;border:1px solid var(--line);border-radius:18px;padding:17px;text-align:left;display:flex;flex-direction:column;align-items:flex-start;min-height:158px;cursor:pointer;transition:transform .18s,box-shadow .18s;color:var(--ink)}.subject:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.subject[aria-pressed="true"]{outline:2px solid var(--rose);outline-offset:2px}.subicon{width:43px;height:43px;border-radius:14px;background:var(--tint,var(--pink2));display:grid;place-items:center;font-size:23px;margin-bottom:11px}.subject strong{font-size:.98rem}.subject small{color:var(--muted);margin-top:3px}.subject .level{margin-top:auto;padding-top:12px;font-size:.73rem;color:var(--rose);font-weight:900}.library{margin-top:52px}.searchrow{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.search{flex:1;min-width:220px;border:1px solid var(--line);border-radius:12px;background:white;padding:12px 14px;outline:none}.search:focus{border-color:var(--rose);box-shadow:0 0 0 3px #c64d7c16}.select{border:1px solid var(--line);border-radius:12px;background:white;color:var(--ink);padding:12px}.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.resource{background:white;border:1px solid var(--line);border-radius:18px;padding:19px;display:flex;flex-direction:column;min-height:205px}.type{color:var(--rose);font-size:.69rem;letter-spacing:.08em;text-transform:uppercase;font-weight:950}.resource h3{font-size:1.04rem;margin:9px 0 5px;letter-spacing:-.02em}.resource p{font-size:.88rem;color:var(--muted);margin:0 0 13px}.resource-bottom{display:flex;gap:9px;align-items:center;justify-content:space-between;margin-top:auto}.chip{background:var(--pink3);color:var(--rose);border-radius:8px;padding:5px 8px;font-size:.72rem;font-weight:900}.textlink{color:var(--rose);font-size:.85rem;font-weight:900;text-decoration:none;cursor:pointer}.resource details{font-size:.88rem;margin-top:12px}.resource summary,.howto summary{cursor:pointer;font-weight:850}.empty{display:none;text-align:center;padding:28px;border:1px dashed #e4a7c0;background:#fffafd;border-radius:16px;color:var(--muted)}.empty strong{display:block;color:var(--ink)}.upload{margin-top:50px;padding:26px;border-radius:23px;background:#56384a;color:white;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.upload .eyebrow{color:#ffccdf}.upload h2{margin:7px 0;font-size:1.6rem}.upload p{color:#f0dfe7;margin:0;max-width:650px}.upload .btn{background:white;color:#56384a;border-color:white;white-space:nowrap}.howto{margin-top:16px;padding:18px 20px;background:white;border:1px solid var(--line);border-radius:16px}.howto ol{color:var(--muted);padding-left:22px}.howto li{margin:8px 0}.note{margin-top:13px;padding:12px 14px;border-radius:12px;background:#fff7dc;color:#6e5a32;font-size:.85rem}.footer{text-align:center;padding:25px 20px;background:#fffafd;border-top:1px solid var(--line);color:var(--muted);font-size:.83rem}.footer strong{color:var(--ink)}.hide{display:none!important}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:45px}.hero-card{max-width:480px}.subject-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.top-inner{padding:12px 15px}.nav{gap:10px}.nav a:not(.navbtn){display:none}.hero{padding:39px 17px 27px}.hero h1{font-size:3rem}.hero-card{transform:none}.stats{grid-template-columns:1fr}.subject-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.subject{padding:13px;min-height:150px}.resource-grid{grid-template-columns:1fr}main{padding:10px 17px 48px}.upload{grid-template-columns:1fr;padding:22px}.upload .btn{justify-self:start}.section-title{display:block}}
 </style>
 </head>
 <body>
-<header>
-  <div class="logo">✿ paperpilot.</div>
-  <nav>
-    <a href="#topics">Topics</a>
-    <a href="#practice">Practice</a>
-    <a href="#papers">Papers</a>
-  </nav>
-</header>
-
-<div class="hero">
-  <span class="tag">✦ Cambridge International · 9618</span>
-  <h1>Computer Science,<br>minus the chaos.</h1>
-  <p>Your little corner of the internet for clear notes, tricky questions, worked solutions and exam prep. One topic at a time. You've got this.</p>
-  <a class="button" href="#topics">Explore resources ↗</a>
-</div>
-<main>
-  <section id="topics">
-    <h2>Your study corner ✿</h2>
-    <p class="muted">Choose a starting point. Small steps, big brain energy.</p>
-    <div class="grid">
-      <a class="card" href="#notes">
-        <div class="emoji">📚</div>
-        <h3>Topic notes</h3>
-        <p class="muted">Clear explanations of tricky CS concepts.</p>
-        <span class="pill">Learn</span>
-      </a>
-      <a class="card" href="#practice">
-        <div class="emoji">🧩</div>
-        <h3>Challenge corner</h3>
-        <p class="muted">Original questions to test your understanding.</p>
-        <span class="pill">Practice</span>
-      </a>
-      <a class="card" href="#solutions">
-        <div class="emoji">✍️</div>
-        <h3>Worked solutions</h3>
-        <p class="muted">Step-by-step reasoning, not just answers.</p>
-        <span class="pill">Understand</span>
-      </a>
-      <a class="card" href="#papers">
-        <div class="emoji">🗂️</div>
-        <h3>Past papers</h3>
-        <p class="muted">Find official Cambridge resources.</p>
-        <span class="pill">Revise</span>
-      </a>
-    </div>
-  </section>
-  <section class="content" id="notes">
-    <h2>📚 Topic notes</h2>
-    <p class="muted">Coming soon: concise notes, key definitions and worked examples.</p>
-  </section>
-  <section class="content" id="practice">
-    <h2>🧩 Challenge corner</h2>
-    <p class="muted">Coming soon: tricky questions to practise your exam technique.</p>
-    <details>
-      <summary>Try a quick binary challenge</summary>
-      <p>Convert denary 13 to 8-bit binary.</p>
-      <details>
-        <summary>Show answer</summary>
-        <p><strong>00001101</strong> — because 8 + 4 + 1 = 13.</p>
-      </details>
-    </details>
-  </section>
-  <section class="content" id="solutions">
-    <h2>✍️ Worked solutions</h2>
-    <p class="muted">Solutions will explain each step so you can understand the method.</p>
-  </section>
-  <section class="content" id="papers">
-    <h2>🗂️ Past papers</h2>
-    <p class="muted">For syllabus details and official information, visit <a href="https://www.cambridgeinternational.org/" target="_blank" rel="noopener noreferrer">Cambridge International</a>.</p>
-  </section>
-  <section class="content" id="about">
-    <h2>💌 About PaperPilot</h2>
-    <p class="muted">An independent, student-made study hub to make Cambridge Computer Science a little less intimidating.</p>
-  </section>
-</main>
-<footer>
-  Made with ♡ by a student, for students.<br><br>
-  Independent resource; not affiliated with Cambridge International.
-</footer>
-</body>
-</html>
-0 commit comments
-Comments
+<header class="top"><div class="top-inner"><a class="brand" href="#home"><span class="brandicon">🎀</span><span>Cambridge Study Hub ♡</span></a><nav class="nav"><a href="#subjects">Subjects</a><a href="#library">Resources</a><a class="navbtn" href="#add">Add my files +</a></nav></div></header>
+<section class="hero" id="home"><div><span class="kicker">🌷 IGCSE · O Level · AS Level</span><h1>Your study nook,<br><span>your subjects.</span> ♡</h1><p>A little pink corner for notes, tricky questions, worked solutions and revision links — made for the subjects you're actually studying.</p><div class="actions"><a class="btn primary" href="#subjects">Pick a subject ✿</a><a class="btn secondary" href="#add">Add my resources ↗</a></div></div><aside class="hero-card"><div class="tiny">your mini study plan ✧</div><h2>A little progress counts.</h2><div class="planner-row"><span class="bubble">📚</span><span><strong>Revise one topic</strong><small>Small chunks, less panic</small></span></div><div class="planner-row"><span class="bubble lilac">🧠</span><span><strong>Try a tricky question</strong><small>Practice makes patterns click</small></span></div><div class="planner-row"><span class="bubble mint">🧁</span><span><strong>Save your own notes</strong><small>Keep your resources together</small></span></div></aside></section>
+<main><section class="stats"><div class="stat"><strong>🎀 8 O Level subjects</strong><span>Your subjects, no giant directory.</span></div><div class="stat"><strong>🌸 3 AS subjects</strong><span>Maths, Computer Science and Sociology.</span></div><div class="stat"><strong>📎 Your own files</strong><span>Upload notes and link them in the library.</span></div></section>
+<section id="subjects"><div class="section-title"><div><div class="eyebrow">✿ choose your corner</div><h2>My subjects</h2><p>Tap a subject to filter the resource shelf below.</p></div></div><div class="filters" id="levelFilters"><button class="filter active" data-level="All">All subjects ♡</button><button class="filter" data-level="O Level">O Level</button><button class="filter" data-level="AS Level">AS Level</button></div><div class="subject-grid" id="subjectGrid">
+<button class="subject" data-subject="English Language" data-level="O Level" aria-pressed="false" style="--tint:#ffe1eb"><span class="subicon">✍️</span><strong>English Language</strong><small>Writing & comprehension</small><span class="level">O LEVEL</span></button>
+<button class="subject" data-subject="Mathematics" data-level="O Level" aria-pressed="false" style="--tint:#eee5ff"><span class="subicon">➗</span><strong>Mathematics</strong><small>Algebra & graphs</small><span class="level">O LEVEL</span></button>
+<button class="subject" data-subject="Physics" data-level="O Level" aria-pressed="false" style="--tint:#def5ed"><span class="subicon">⚛️</span><strong>Physics</strong><small>Equations & explanations</small><span class="level">O LEVEL</span></button>
+<button class="subject" data-subject="Computer Science" data-level="O Level" aria-pressed="false" style="--tint:#fff0c7"><span class="subicon">💻</span><strong>Computer Science</strong><small>Algorithms & data</small><span class="level">O LEVEL</span></button>
+<button class="subject" data-subject="Sociology" data-level="O Level" aria-pressed="false" style="--tint:#ffe8d8"><span class="subicon">🗣️</span><strong>Sociology</strong><small>Concepts & essays</small><span class="level">O LEVEL</span></button>
+<button class="subject" data-subject="Urdu" data-level="O Level" aria-pressed="false" style="--tint:#e5f5d8"><span class="subicon">📝</span><strong>Urdu</strong><small>Writing & language</small><span class="level">O LEVEL</span></button>
+<button class="subject" data-subject="Islamiyat" data-level="O Level" aria-pressed="false" style="--tint:#e9e2ff"><span class="subicon">🌙</span><strong>Islamiyat</strong><small>Sources & themes</small><span class="level">O LEVEL</span></button>
+<button class="subject" data-subject="Pakistan Studies" data-level="O Level" aria-pressed="false" style="--tint:#dff4e7"><span class="subicon">🇵🇰</span><strong>Pakistan Studies</strong><small>History & geography</small><span class="level">O LEVEL</span></button>
+<button class="subject" data-subject="Mathematics" data-level="AS Level" aria-pressed="false" style="--tint:#eee5ff"><span class="subicon">📈</span><strong>Mathematics</strong><small>Functions & calculus</small><span class="level">AS LEVEL</span></button>
+<button class="subject" data-subject="Computer Science" data-level="AS Level" aria-pressed="false" style="--tint:#fff0c7"><span class="subicon">🖥️</span><strong>Computer Science</strong><small>Algorithms & programming</small><span class="level">AS LEVEL</span></button>
+<button class="subject" data-subject="Sociology" data-level="AS Level" aria-pressed="false" style="--tint:#ffe8d8"><span class="subicon">📚</span><strong>Sociology</strong><small>Theories, studies & essays</small><span class="level">AS LEVEL</span></button>
+</div></section>
+<section id="library" class="library"><div class="section-title"><div><div class="eyebrow">📚 saved for later</div><h2>Resource shelf</h2><p>Starter examples below — replace or add your own resources as you go.</p></div></div><div class="searchrow"><input id="search" class="search" type="search" placeholder="🔎 Search a subject or topic…"><select id="typeFilter" class="select"><option value="All">All resource types</option><option value="Notes">Notes</option><option value="Practice">Practice</option><option value="Worked solution">Worked solutions</option><option value="Study tips">Study tips</option><option value="Past papers">Past-paper links</option></select></div>
+<div class="resource-grid" id="resourceGrid">
+<article class="resource" data-resource data-subject="Computer Science" data-level="O Level" data-type="Practice"><span class="type">🧩 Original practice</span><h3>Binary conversion warm-up</h3><p>Convert denary 13 into 8-bit binary.</p><div class="resource-bottom"><span class="chip">O Level CS</span><a class="textlink" href="#cs-answer">Try it ↗</a></div><details id="cs-answer"><summary>Reveal answer</summary><p>00001101, because 8 + 4 + 1 = 13. Use leading zeroes to make it 8 bits.</p></details></article>
+<article class="resource" data-resource data-subject="Mathematics" data-level="O Level" data-type="Worked solution"><span class="type">✏️ Worked example</span><h3>Solve a linear equation</h3><p>Solve 3x + 5 = 20.</p><div class="resource-bottom"><span class="chip">O Level Maths</span><span class="textlink">Steps below ↓</span></div><details><summary>Show steps</summary><p>Subtract 5: 3x = 15. Divide by 3: <strong>x = 5</strong>. Check: 3(5) + 5 = 20.</p></details></article>
+<article class="resource" data-resource data-subject="Physics" data-level="O Level" data-type="Study tips"><span class="type">⚛️ Exam tip</span><h3>Keep an eye on units</h3><p>Write the equation first, substitute values with units, then check that your final unit makes sense.</p><div class="resource-bottom"><span class="chip">O Level Physics</span><span class="textlink">Quick reminder</span></div></article>
+<article class="resource" data-resource data-subject="English Language" data-level="O Level" data-type="Study tips"><span class="type">✍️ Writing checklist</span><h3>Before submitting a response</h3><p>Check audience, purpose, tone, paragraph order, sentence variety and whether each point answers the task.</p><div class="resource-bottom"><span class="chip">O Level English</span><span class="textlink">Quick checklist</span></div></article>
+<article class="resource" data-resource data-subject="Sociology" data-level="AS Level" data-type="Study tips"><span class="type">🗣️ Essay structure</span><h3>Build an analytical paragraph</h3><p>Make a point, explain the concept, support it with a study or evidence, then connect it back to the question.</p><div class="resource-bottom"><span class="chip">AS Sociology</span><span class="textlink">Paragraph method</span></div></article>
+<article class="resource" data-resource data-subject="Computer Science" data-level="AS Level" data-type="Practice"><span class="type">💻 Programming practice</span><h3>Track a loop</h3><p>A variable starts at 2. Each loop adds 3, repeating four times. What is the final value?</p><div class="resource-bottom"><span class="chip">AS Computer Science</span><span class="textlink">Answer below ↓</span></div><details><summary>Reveal answer</summary><p>14. The values after each pass are 5, 8, 11 and 14.</p></details></article>
+<article class="resource" data-resource data-subject="Mathematics" data-level="AS Level" data-type="Worked solution"><span class="type">📈 Worked example</span><h3>Differentiate a simple function</h3><p>Find the derivative of y = x² + 3x.</p><div class="resource-bottom"><span class="chip">AS Mathematics</span><span class="textlink">Steps below ↓</span></div><details><summary>Show steps</summary><p>Differentiate each term: x² becomes 2x and 3x becomes 3. So <strong>dy/dx = 2x + 3</strong>.</p></details></article>
+<article class="resource" data-resource data-subject="Pakistan Studies" data-level="O Level" data-type="Study tips"><span class="type">🇵🇰 Answer tip</span><h3>Make evidence specific</h3><p>Support explanatory points with relevant dates, events, examples or named places when the question calls for evidence.</p><div class="resource-bottom"><span class="chip">O Level Pakistan Studies</span><span class="textlink">Revision tip</span></div></article>
+<article class="resource" data-resource data-subject="Urdu" data-level="O Level" data-type="Notes"><span class="type">📝 Resource slot</span><h3>Your Urdu notes go here</h3><p>Replace this starter card with your own vocabulary list, writing guide or revision PDF.</p><div class="resource-bottom"><span class="chip">O Level Urdu</span><a class="textlink" href="#add">Add a file ↗</a></div></article>
+<article class="resource" data-resource data-subject="Islamiyat" data-level="O Level" data-type="Notes"><span class="type">🌙 Resource slot</span><h3>Your Islamiyat notes go here</h3><p>Add your own notes, key references, or a revision checklist for a topic.</p><div class="resource-bottom"><span class="chip">O Level Islamiyat</span><a class="textlink" href="#add">Add a file ↗</a></div></article>
+<article class="resource" data-resource data-subject="Sociology" data-level="O Level" data-type="Notes"><span class="type">📚 Resource slot</span><h3>Your O Level Sociology notes go here</h3><p>Use this space for key terms, theorists, concepts, and structured essay plans.</p><div class="resource-bottom"><span class="chip">O Level Sociology</span><a class="textlink" href="#add">Add a file ↗</a></div></article>
+<article class="resource" data-resource data-subject="Computer Science" data-level="O Level" data-type="Past papers"><span class="type">🗂️ Official resources</span><h3>Cambridge subject resources</h3><p>Use the official Cambridge site for syllabus details and public subject information.</p><div class="resource-bottom"><span class="chip">O Level CS</span><a class="textlink" href="https://www.cambridgeinternational.org/" target="_blank" rel="noopener noreferrer">Open Cambridge ↗</a></div></article>
+</div><div class="empty" id="emptyState"><strong>No matching resource yet ♡</strong>You can add your own notes or links to this shelf.</div></section>
+<section class="upload" id="add"><div><div class="eyebrow">🎀 make it yours</div><h2>Add your notes & files ♡</h2><p>PDF notes, revision sheets, images and links can live in your GitHub repository. Upload your file, then add a resource card here so it appears in the library.</p></div><a class="btn" href="https://github.com/Aeshaxd/IGCSEANDALEVELSTUDYHUB/upload" target="_blank" rel="noopener noreferrer">Upload files on GitHub ↗</a></section>
+<details class="howto"><summary>Show me how to add my own file 🌸</summary><ol><li>Click <strong>Upload files on GitHub</strong> above and sign in.</li><li>Upload your PDF or other file. For example, keep it in a folder such as <code>resources/maths/</code>.</li><li>Click <strong>Commit changes</strong> to save it.</li><li>To make it appear in the website library, add a resource card in <code>index.html</code> and link to the file. Uploading alone won't automatically add it to the visible library.</li></ol><div class="note"><strong>Heads-up:</strong> GitHub Pages is a static website, so this button opens GitHub's upload page. It doesn't create a private upload dashboard. Only share resources you have permission to publish, and don't upload private information.</div></details>
+</main><footer class="footer"><strong>Cambridge Study Hub ♡</strong><br>Made with 🌷 for students. Independent resource; not affiliated with Cambridge International.</footer>
+<script>
+const subjectCards=[...document.querySelectorAll('.subject')];
+const levelButtons=[...document.querySelectorAll('#levelFilters .filter')];
+const resources=[...document.querySelectorAll('[data-resource]')];
+const search=document.getElementById('search');
+const typeFilter=document.getElementById('typeFilter');
+const empty=document.getElementById('emptyState');
+let selectedSubject='All', selectedLevel='All';
+function update(){let shown=0; resources.forEach(card=>{const matchSubject=selectedSubject==='All'||card.dataset.subject===selectedSubject;const matchLevel=selectedLevel==='All'||card.dataset.level===selectedLevel;const text=card.innerText.toLowerCase();const matchSearch=text.includes(search.value.toLowerCase());const matchType=typeFilter.value==='All'||card.dataset.type===typeFilter.value;const visible=matchSubject&&matchLevel&&matchSearch&&matchType;card.classList.toggle('hide',!visible);if(visible)shown++;});empty.style.display=shown?'none':'block';}
+subjectCards.forEach(btn=>btn.addEventListener('click',()=>{const same=selectedSubject===btn.dataset.subject&&selectedLevel===btn.dataset.level;selectedSubject=same?'All':btn.dataset.subject;selectedLevel=same?'All':btn.dataset.level;subjectCards.forEach(b=>b.setAttribute('aria-pressed',String(!same&&b===btn)));levelButtons.forEach(b=>b.classList.toggle('active',b.dataset.level===selectedLevel||(selectedLevel==='All'&&b.dataset.level==='All')));document.getElementById('library').scrollIntoView({behavior:'smooth'});update();}));
+levelButtons.forEach(btn=>btn.addEventListener('click',()=>{selectedLevel=btn.dataset.level;selectedSubject='All';levelButtons.forEach(b=>b.classList.toggle('active',b===btn));subjectCards.forEach(b=>b.setAttribute('aria-pressed','false'));update();}));
+search.addEventListener('input',update);typeFilter.addEventListener('change',update);
+</script>
+</body></html>
 0
  (0)
 Comment
